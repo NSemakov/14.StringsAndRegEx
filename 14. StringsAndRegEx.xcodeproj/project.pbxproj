@@ -14,6 +14,7 @@
 		84796EF91B61D44100EF6F06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84796EF81B61D44100EF6F06 /* Images.xcassets */; };
 		84796EFC1B61D44100EF6F06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84796EFA1B61D44100EF6F06 /* LaunchScreen.xib */; };
 		84796F081B61D44200EF6F06 /* _4__StringsAndRegExTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84796F071B61D44200EF6F06 /* _4__StringsAndRegExTests.m */; };
+		84796F131B61D46100EF6F06 /* NVStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 84796F121B61D46100EF6F06 /* NVStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		84796F011B61D44200EF6F06 /* 14. StringsAndRegExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "14. StringsAndRegExTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84796F061B61D44200EF6F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84796F071B61D44200EF6F06 /* _4__StringsAndRegExTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _4__StringsAndRegExTests.m; sourceTree = "<group>"; };
+		84796F111B61D46100EF6F06 /* NVStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NVStudent.h; path = ../NVStudent.h; sourceTree = "<group>"; };
+		84796F121B61D46100EF6F06 /* NVStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NVStudent.m; path = ../NVStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				84796EEF1B61D44100EF6F06 /* AppDelegate.h */,
 				84796EF01B61D44100EF6F06 /* AppDelegate.m */,
+				84796F111B61D46100EF6F06 /* NVStudent.h */,
+				84796F121B61D46100EF6F06 /* NVStudent.m */,
 				84796EF21B61D44100EF6F06 /* ViewController.h */,
 				84796EF31B61D44100EF6F06 /* ViewController.m */,
 				84796EF51B61D44100EF6F06 /* Main.storyboard */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84796EF41B61D44100EF6F06 /* ViewController.m in Sources */,
+				84796F131B61D46100EF6F06 /* NVStudent.m in Sources */,
 				84796EF11B61D44100EF6F06 /* AppDelegate.m in Sources */,
 				84796EEE1B61D44100EF6F06 /* main.m in Sources */,
 			);
