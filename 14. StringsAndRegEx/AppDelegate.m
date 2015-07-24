@@ -59,6 +59,19 @@
     //---------
     //end of Uchenik
     
+    //Student
+    NSMutableArray *arrayConsistOfSentencesWithNSString=[NSMutableArray new];
+    NSRegularExpression* exp2=[student regularExpressionWithString:@"NSString"];
+    for (NSString* str in arrayOfStrings){
+        NSRange rangeOfNSString=[exp2 rangeOfFirstMatchInString:str options:0 range:NSMakeRange(0, [str length])];
+        if (rangeOfNSString.location!=NSNotFound) {
+            [arrayConsistOfSentencesWithNSString addObject:str];
+        }
+    }
+    NSLog(@"only sentence with NSString: %@",arrayConsistOfSentencesWithNSString);
+    //---------
+    //end of Student
+    
     return YES;
 }
 
