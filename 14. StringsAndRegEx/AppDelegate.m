@@ -103,7 +103,8 @@
     //Superman
     
     NSRegularExpression *exp4=[student regularExpressionWithString:@"[^\\s]\\b"];
-    NSRegularExpression *exp3=[student regularExpressionWithString:@"\\b[^\\s]+\\b"];
+    NSRegularExpression *exp3=[student regularExpressionWithString:@"\\w*"];
+    //NSRegularExpression *exp3=[student regularExpressionWithString:@"\\b[^\\s]+\\b"];
     NSMutableArray *arrayOfReversedString=[NSMutableArray new];
     for (NSString* obj in arrayConsistOfSentencesWithNSString) {
         NSMutableArray *stringByWord=[NSMutableArray new];
@@ -136,7 +137,7 @@
          }];
     }
     
-    NSLog(@"%@",arrayOfReversedString);
+    NSLog(@"arrayOfReversed String whith last symbol uppercase: %@",arrayOfReversedString);
     //---------
     //end of Superman
 
