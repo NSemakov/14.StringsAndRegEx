@@ -72,6 +72,74 @@
     //---------
     //end of Student
     
+    //Master
+    /*
+    NSRegularExpression *exp3=[student regularExpressionWithString:@"\\b[^\\s]+\\b"];
+    NSMutableArray *arrayOfReversedString=[NSMutableArray new];
+    for (NSString* obj in arrayConsistOfSentencesWithNSString) {
+        NSMutableArray *stringByWord=[NSMutableArray new];
+            [exp3 enumerateMatchesInString:obj options:0
+                                     range:NSMakeRange(0, [obj length])
+                                     usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+            NSRange range=[result rangeAtIndex:0];
+            if (range.location!=NSNotFound) {
+                [stringByWord insertObject:[obj substringWithRange:range]
+                              atIndex:0];
+            }
+            if (flags == NSMatchingHitEnd) {
+                NSString* reverseString=[stringByWord componentsJoinedByString:@" "];
+                [arrayOfReversedString addObject:reverseString];
+            }
+            
+        }];
+    }
+
+    NSLog(@"%@",arrayOfReversedString);
+  */
+    
+    //---------
+    //end of Master
+    
+    //Superman
+    
+    NSRegularExpression *exp4=[student regularExpressionWithString:@"[^\\s]\\b"];
+    NSRegularExpression *exp3=[student regularExpressionWithString:@"\\b[^\\s]+\\b"];
+    NSMutableArray *arrayOfReversedString=[NSMutableArray new];
+    for (NSString* obj in arrayConsistOfSentencesWithNSString) {
+        NSMutableArray *stringByWord=[NSMutableArray new];
+        [exp3 enumerateMatchesInString:obj options:0
+                                 range:NSMakeRange(0, [obj length])
+                            usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+         NSRange range=[result rangeAtIndex:0];
+        if (range.location!=NSNotFound) {
+            [stringByWord insertObject:[obj substringWithRange:range]
+                                                       atIndex:0];
+        }
+        if (flags == NSMatchingHitEnd) {
+            NSMutableArray* arrayOfWordsWithLastSymbolUpperCase=[NSMutableArray new];
+            for (NSString *word in stringByWord){
+                
+                [exp4 enumerateMatchesInString:word options:0 range:NSMakeRange(0, [word length]) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+                    NSRange rangeOfLastLetter=[result rangeAtIndex:0];
+                    NSString *lastSymbolLowerCase=[word substringWithRange:rangeOfLastLetter];
+                    [arrayOfWordsWithLastSymbolUpperCase addObject:[word stringByReplacingCharactersInRange:rangeOfLastLetter withString:[lastSymbolLowerCase uppercaseString]]];
+                }];
+                if (flags == NSMatchingHitEnd){
+                    
+                }
+            }
+            NSString* reverseString=[arrayOfWordsWithLastSymbolUpperCase componentsJoinedByString:@" "];
+            [arrayOfReversedString addObject:reverseString];
+            
+        }
+                                
+         }];
+    }
+    
+    NSLog(@"%@",arrayOfReversedString);
+    //---------
+    //end of Superman
+
     return YES;
 }
 
